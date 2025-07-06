@@ -1,4 +1,6 @@
-realtime-ai-chat-app/
+# Realtime-Chat-Application-with-AI
+```
+realtime-chat-app-with-ai/
 ├── backend/
 │   ├── chat_backend.py
 │   ├── requirements.txt
@@ -17,32 +19,32 @@ realtime-ai-chat-app/
 │   └── README.md              # Frontend-specific README (optional)
 ├── .gitignore                 # Top-level .gitignore for the whole repo
 └── README.md                  # Main project README
+```
+# Explanation of the Structure:
+### realtime-chat-app-with-ai/: This is the root directory for your entire project.
 
-Explanation of the Structure:
-realtime-ai-chat-app/: This is the root directory for your entire project.
+### backend/: Contains all Python backend files.
 
-backend/: Contains all Python backend files.
+### chat_backend.py: Your Flask Socket.IO application.
 
-chat_backend.py: Your Flask Socket.IO application.
+### requirements.txt: Lists Python dependencies (Flask, Flask-SocketIO, google-cloud-firestore, google-generativeai, Flask-Cors, gevent). You can generate this by running pip freeze > requirements.txt in your activated virtual environment.
 
-requirements.txt: Lists Python dependencies (Flask, Flask-SocketIO, google-cloud-firestore, google-generativeai, Flask-Cors, gevent). You can generate this by running pip freeze > requirements.txt in your activated virtual environment.
+### Dockerfile: Defines how to build a Docker image for your Flask application, essential for deployment to services like Google Cloud Run.
 
-Dockerfile: Defines how to build a Docker image for your Flask application, essential for deployment to services like Google Cloud Run.
+### .gcloudignore: Specifies files and directories to ignore when deploying to Google Cloud, similar to .gitignore.
 
-.gcloudignore: Specifies files and directories to ignore when deploying to Google Cloud, similar to .gitignore.
+### frontend/: Contains your Flutter web application.
 
-frontend/: Contains your Flutter web application.
+### realtime_chat_flutter/: This is the standard Flutter project folder.
 
-realtime_chat_flutter/: This is the standard Flutter project folder.
+### lib/main.dart: Your main Flutter application code.
 
-lib/main.dart: Your main Flutter application code.
+### pubspec.yaml: Flutter project dependencies.
 
-pubspec.yaml: Flutter project dependencies.
+### web/: Contains web-specific files for your Flutter app, which will be served by Firebase Hosting.
 
-web/: Contains web-specific files for your Flutter app, which will be served by Firebase Hosting.
+### firebase.json: Firebase Hosting configuration file.
 
-firebase.json: Firebase Hosting configuration file.
+### .gitignore (top-level): A .gitignore file at the root to ignore common files and directories from both Python and Flutter projects (e.g., venv/, build/, .dart_tool/, __pycache__/).
 
-.gitignore (top-level): A .gitignore file at the root to ignore common files and directories from both Python and Flutter projects (e.g., venv/, build/, .dart_tool/, __pycache__/).
-
-README.md (main): A comprehensive README.md at the root explaining the entire project, setup, and deployment steps.
+### README.md (main): A comprehensive README.md at the root explaining the entire project, setup, and deployment steps.
